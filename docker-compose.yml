@@ -1,0 +1,9 @@
+version: "2.4"
+
+services:
+  dev:
+    container_name: mvp-spy-dev
+    image: maven:3-eclipse-temurin-17-alpine
+    volumes:
+      - ./:/root/mvp-spy/
+    command: sh -c "while true; do sleep 1; done"
