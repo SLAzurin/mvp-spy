@@ -10,7 +10,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-    
+
     <build>
         <defaultGoal>compile package</defaultGoal>
         <plugins>
@@ -54,11 +54,19 @@
             </plugin>
         </plugins>
     </build>
-    
-    <repositories>
-    </repositories>
+
+    <repositories></repositories>
 
     <dependencies>
-        
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>5.0.0-alpha.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.5.0</version>
+        </dependency>
     </dependencies>
 </project>
