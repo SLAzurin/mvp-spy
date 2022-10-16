@@ -14,9 +14,11 @@ public class OptionsParser {
             ffOptions.setHeadless(true);
         }
 
-        ret.setFFOptions(ffOptions);
-
         FirefoxProfile ffProfile = new FirefoxProfile(new File(System.getenv("FF_PROFILE")));
+
+        ffOptions.setProfile(ffProfile);
+
+        ret.setFFOptions(ffOptions);
 
         return ret;
     }
