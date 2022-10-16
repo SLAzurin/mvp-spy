@@ -6,20 +6,16 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class OptionsParser {
-    public static Options parseEnv() {
-        Options ret = new Options();
-
+    public static void parseEnv() {
         FirefoxOptions ffOptions = new FirefoxOptions();
         if (System.getenv("HEADLESS").equals("true")) {
             ffOptions.setHeadless(true);
         }
 
-        FirefoxProfile ffProfile = new FirefoxProfile(new File(System.getenv("FF_PROFILE")));
+        FirefoxProfile ffProfile = new FirefoxProfile(new File(System.getenv("FF_PROFILE_PATH")));
 
         ffOptions.setProfile(ffProfile);
 
-        ret.setFFOptions(ffOptions);
-
-        return ret;
+        Options.setFFOptions(ffOptions);
     }
 }
